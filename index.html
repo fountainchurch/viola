@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Camp Viola Acceptance Letter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2b2620;
+    --ink-soft: #5a5247;
+    --paper: #faf6ef;
+    --card: #ffffff;
+    --forest: #2f5d3a;
+    --forest-deep: #224429;
+    --sun: #d98a2b;
+    --line: #e6ddcf;
+    --shadow: 0 1px 2px rgba(43,38,32,.04), 0 8px 28px rgba(43,38,32,.08);
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(circle at 12% -5%, rgba(47,93,58,.06), transparent 40%),
+      radial-gradient(circle at 90% 0%, rgba(217,138,43,.07), transparent 38%);
+    color: var(--ink);
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+  }
+
+  /* ---- Header ---- */
+  .masthead {
+    text-align: center;
+    padding-bottom: 34px;
+    margin-bottom: 38px;
+    border-bottom: 1px solid var(--line);
+  }
+  .eyebrow {
+    font-family: 'Source Sans 3', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .22em;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--forest);
+    margin: 0 0 10px;
+  }
+  .masthead h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: clamp(2.3rem, 6vw, 3.2rem);
+    line-height: 1.05;
+    margin: 0;
+    color: var(--ink);
+  }
+  .masthead .dates {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--sun);
+    margin-top: 12px;
+  }
+
+  /* ---- Letter ---- */
+  .letter p {
+    margin: 0 0 1.25em;
+    color: var(--ink-soft);
+  }
+  .letter .salutation {
+    font-family: 'Fraunces', serif;
+    font-size: 1.25rem;
+    color: var(--ink);
+    margin-bottom: 1em;
+  }
+  .letter strong { color: var(--ink); font-weight: 600; }
+  .letter a {
+    color: var(--forest);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .signoff {
+    margin-top: 36px;
+  }
+  .signoff .closing {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .signoff .name {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.15rem;
+    color: var(--ink);
+  }
+  .signoff .title {
+    font-size: .95rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---- Packing list card ---- */
+  .packing {
+    margin: 48px 0;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+  .packing-preview {
+    flex: 0 0 200px;
+    max-width: 200px;
+    position: relative;
+    background: #f0ece3;
+    border-right: 1px solid var(--line);
+    overflow: hidden;
+  }
+  .packing-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+  }
+  .packing-preview::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 55%, rgba(255,255,255,.85));
+  }
+  .packing-body {
+    flex: 1 1 280px;
+    padding: 26px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+  }
+  .packing-body .tag {
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--sun);
+  }
+  .packing-body h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--ink);
+  }
+  .packing-body p {
+    margin: 4px 0 16px;
+    font-size: .95rem;
+    color: var(--ink-soft);
+  }
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    align-self: flex-start;
+    background: var(--forest);
+    color: #fff;
+    font-weight: 600;
+    font-size: .95rem;
+    text-decoration: none;
+    padding: 11px 20px;
+    border-radius: 10px;
+    transition: background .18s ease, transform .18s ease;
+  }
+  .btn:hover { background: var(--forest-deep); transform: translateY(-1px); }
+  .btn svg { width: 17px; height: 17px; }
+
+  /* ---- Form section ---- */
+  .form-section {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--line);
+  }
+  .form-section .eyebrow { text-align: left; }
+  .form-section h2 {
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1.7rem;
+    margin: 0 0 6px;
+    color: var(--ink);
+  }
+  .form-section .lede {
+    color: var(--ink-soft);
+    margin: 0 0 28px;
+  }
+  .form-card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    box-shadow: var(--shadow);
+    padding: 8px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 56px;
+    font-size: .85rem;
+    color: var(--ink-soft);
+    opacity: .7;
+  }
+
+  @media (max-width: 480px) {
+    .packing-preview { flex-basis: 100%; max-width: 100%; height: 160px; border-right: none; border-bottom: 1px solid var(--line); }
+    .packing-preview img { object-position: top center; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">Fountain Church &middot; Summer Camp</p>
+    <h1>Camp Viola Acceptance Letter</h1>
+    <p class="dates">May 31 &ndash; June 4, 2026</p>
+  </header>
+
+  <section class="letter">
+    <p class="salutation">Dear Parents and Caregivers,</p>
+
+    <p>Your child has been accepted to Camp Viola for the week of <strong>May 31 &ndash; June 4, 2026</strong>. We appreciate you letting your child come, and we pray that it will be a wonderful experience for everyone involved. Please carefully read the information below regarding this year&rsquo;s camp.</p>
+
+    <p>Children may check in between <strong>5 p.m. and 6 p.m. on May 31</strong>. We will not be ready to begin checking children in until 5 p.m. Your child will receive a medical screening by the camp nurse. All children must pass the screening before they go to camp. Children must be lice/nit free in order to attend camp. At registration, children should be accompanied by a parent or guardian. In addition to items listed on the clothing list, parents should also bring a copy of the child&rsquo;s current insurance card or Medicaid card. <strong>No child will be able to stay at camp this year without these copies.</strong></p>
+
+    <p>You will be contacted during the week prior to camp to answer any registration questions you may have. If your contact information changes please notify me at <strong>(706) 524-8811</strong>, or email me at <a href="mailto:kstringham@fountainchurch.us">kstringham@fountainchurch.us</a>. Please contact us if you know that your child will be unable to attend camp so that we can notify the next child on the list. All children should be picked up at Camp Viola between <strong>4:00 p.m. and 5:00 p.m. on Thursday, June 4</strong>.</p>
+
+    <p>Attached to this letter is a list of things that your child will need at Camp Viola. Click the button below to view that list. Space is limited so please only send the items on this list. <strong>Do not send a pillow, bed linens, or towels</strong> &mdash; they are provided. Children are also not allowed to bring cell phones, radios, electronic games, CD players, toys, or money. Any items not on the supply list should be pre-approved by the director, or they will be taken up until the end of camp. Please bring any medications in their original bottles or packaging.</p>
+
+    <p>We look forward to seeing you at Camp Viola!</p>
+
+    <div class="signoff">
+      <p class="closing">Sincerely,</p>
+      <div class="name">Kevin Stringham</div>
+      <div class="title">Camp Director</div>
+    </div>
+  </section>
+
+  <!-- Packing list -->
+  <section class="packing">
+    <div class="packing-preview">
+      <img src="packing-list-preview.png" alt="Camp Viola packing list preview">
+    </div>
+    <div class="packing-body">
+      <span class="tag">Bring this with you</span>
+      <h2>Packing List</h2>
+      <p>Clothing and supply checklist for boys and girls. Space is limited &mdash; please pack only what&rsquo;s listed.</p>
+      <a class="btn" href="Camp_Viola_Packing_Lists.pdf" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        View Packing List (PDF)
+      </a>
+    </div>
+  </section>
+
+  <!-- Confirmation form -->
+  <section class="form-section">
+    <p class="eyebrow">One last step</p>
+    <h2>Confirm &amp; Sign</h2>
+    <p class="lede">Please complete the form below to confirm you&rsquo;ve read this letter and that your child will be attending Camp Viola.</p>
+
+    <div class="form-card">
+      <script id="subsplash-embed-form-83fb6a25-9924-4bf5-b11f-f5b6ca589c78" type="text/javascript">
+        var target = document.getElementById("subsplash-embed-form-83fb6a25-9924-4bf5-b11f-f5b6ca589c78");
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.onload = function() {
+          subsplashEmbed("u/-WKTKDM/forms/d/83fb6a25-9924-4bf5-b11f-f5b6ca589c78?embed=1","https://subsplash.com","subsplash-embed-form-83fb6a25-9924-4bf5-b11f-f5b6ca589c78");
+        };
+        script.src = "https://dashboard.static.subsplash.com/production/web-client/external/embed-1.1.0.js";
+        target.parentElement.insertBefore(script, target);
+      </script>
+    </div>
+  </section>
+
+  <footer>
+    Fountain Church &middot; Camp Viola 2026
+  </footer>
+
+</div>
+</body>
+</html>
